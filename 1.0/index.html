@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Komputilo</h1>
+    <hr>
+    <h2>La respondo</h2>
+    <p id="answer"></p>
+    <script>
+        var hi = prompt("Endoni kalkulon", "");
+        var hello
+        var waserror = false;
+        try {
+            hello = eval(hi)
+        } catch (err) {
+            document.getElementById("answer").innerHTML = "Not a valid equation"
+            waserror = true;
+        }
+        if (!waserror) {
+            document.getElementById("answer").innerHTML = hello;
+        }
+
+    </script>
+</body>
+
+</html>

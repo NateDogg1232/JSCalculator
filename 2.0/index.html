@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Komputilo/Calculator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+    <h1>La Plej Bona Komputilo/The Best Calculator</h1>
+    <hr>
+    <form class="inputs" onsubmit="doThing(); return false;">
+        <p>Unua Operaciilo/First Operator: </p><input type="number" id="number1">
+        <p>Dua Operaciilo/Second Operator: </p><input type="number" id="number2">
+        <p>Operacio/Operation: </p><input type="text" id="operation">
+        <input type="submit" text="Evaluate/Fari">
+    </form>
+    <hr>
+    <h2>La Respondo/Response:</h2>
+    <p id="respondo"></p>
+    
+    <h3>Notes/Notoj:</h3>
+    <h4>Operations/Operacioj</h4>
+    <ul>
+        <li>Aldoni/Add/+</li>
+        <li>Subtract/Subtrakti/-</li>
+        <li>Multiply/Multipliki/*</li>
+        <li>Divide/Dividi/"/"</li>
+        <li>Modulus/Modulo/mod/%</li>
+        <li>Exponent/Potencigi/exp/pow/**/^</li>
+    </ul>
+    <script src="js.js"></script>
+</body>
+
+</html>
