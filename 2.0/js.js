@@ -18,7 +18,7 @@ function doThing() {
     }
     switch (document.getElementById("operation").value.toLowerCase()) {
         case "add":
-        case "aldoni":
+        case "sumigi":
         case "+":
             add(int1, int2);
             break;
