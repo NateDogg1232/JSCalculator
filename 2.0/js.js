@@ -1,9 +1,11 @@
+var lastAnswer = 0;
+
 //The main function used to evaluate which operation is being done
 function doThing() {
     //We check for any blank boxes (With trimming of course)
 
     if (document.getElementById("number1").value.trim() == "" || document.getElementById("number2").value.trim() == "") {
-        doOutput("Eraro: Enigi numeron en la enigejoj<br>Error: Enter value in the text areas");
+        setOutput("Eraro: Enigi numeron en la enigejoj<br>Error: Enter value in the text areas");
         return;
     }
 
@@ -13,7 +15,7 @@ function doThing() {
 
     //Check the integers for some values that will kill things
     if (int1 == null || int2 == null || int1 == undefined || int2 == undefined || int1 == NaN || int2 == NaN) {
-        doOutput("No nulls pl0x");
+        setOutput("No nulls pl0x");
         return;
     }
     switch (document.getElementById("operation").value.toLowerCase()) {
@@ -37,7 +39,6 @@ function doThing() {
         case "/":
             divide(int1, int2);
             break;
-        //Modlus
         case "mod":
         case "%":
         case "modulo":
@@ -52,12 +53,21 @@ function doThing() {
         case "exponent":
             exp(int1, int2);
             break;
+        case "sin":
+        case "sine":
+            sin(int1);
+        case "tan":
+            tan(int1);
+        case "absolute":
+        case "absolutigi":
+        case "abs":
+            abs(int1);
         case "the meaning of life":
         case "la defino de vivo":
-            doOutput("42");
+            doOutput(42);
             break;
         default:
-            doOutput("Ne vera operacio/Not a valid operator");
+            setOutput("Ne vera operacio/Not a valid operator");
     }
 }
 
@@ -93,6 +103,31 @@ function exp(int1, int2) {
     doOutput(int1 ** int2);
 }
 
+function sin(int1) {
+    doOutput(Math.sin(int1));
+}
+
+function tan(int1) {
+    doOutput(Math.tan(int1));
+}
+
+function abs(int1) {
+    doOutput(Math.abs(int1));
+}
+
+function replaceOp1() {
+    document.getElementById("number1").value = document.getElementById("respondo").innerHTML;
+}
+
+function getPi() {
+    document.getElementById("number1").value = Math.PI;
+}
+
 function doOutput(out) {
+    lastAnswer = out;
+    setOutput(out);
+}
+
+function setOutput(out) {
     document.getElementById("respondo").innerHTML = out;
 }

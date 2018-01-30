@@ -12,11 +12,15 @@
     <h1>La Plej Bona Komputilo/The Best Calculator</h1>
     <hr>
     <form class="inputs" onsubmit="doThing(); return false;">
-        <p>Unua Operaciilo/First Operator: </p><input type="number" id="number1">
-        <p>Dua Operaciilo/Second Operator: </p><input type="number" id="number2">
+        <p>Unua Operaciilo/First Operator: </p><input type="text" id="number1">
+        <p>Dua Operaciilo/Second Operator: </p><input type="text" id="number2">
         <p>Operacio/Operation: </p><input type="text" id="operation">
         <input type="submit" text="Evaluate/Fari">
     </form>
+    <p>Replace operator one with the answer/Enmeti la eligon en operaciilo unu: </p>
+    <button type="button" onclick="replaceOp1()">Replace/Enmeti</button>
+    <p>Place pi in operator one/Meti pi-on en operaciilo unu</p>
+    <button type="button" onclick="getPi()">Place/Meti</button>
     <hr>
     <h2>La Respondo/Response:</h2>
     <p id="respondo"></p>
@@ -30,6 +34,13 @@
         <li>Divide/Dividi/"/"</li>
         <li>Modulus/Modulo/mod/%</li>
         <li>Exponent/Potencigi/exp/pow/**/^</li>
+        <li>Nur uzante unu operaciilo/Only using one operator:
+            <ul>
+                <li>sin/sine</li>
+                <li>tan</li>
+                <li>absolute/absulutigi/abs</li>
+            </ul>
+        </li>
     </ul>
     <script src="js.js"></script>
 </body>
