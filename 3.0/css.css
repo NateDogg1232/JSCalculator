@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+    background-color: slategrey;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+/*    margin-top: 5px;*/
+}
+
+form {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+div.input {
+    background-color: crimson;
+    padding: 10px;
+    text-align: center;
+}
+
+form div {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 20%;
+}
+
+
+div.respondo {
+    width: 100%;
+    text-align: center;
+    background-color: crimson;
+}
+
+div.submit {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.submit input,
+div.submit button {
+    height: 30%;
+}
+
+
+article.notes {
+    padding-left: 10px;
+}

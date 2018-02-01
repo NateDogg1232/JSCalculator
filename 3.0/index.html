@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Komputilo/Calculator</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+    <h1>La Plej Bona Komputilo/The Best Calculator</h1>
+    <div class="input">
+        <form class="inputs" onsubmit="doThing(); return false;">
+            <div>
+                <p>Unua Operaciilo/First Operator: </p><input type="text" id="number1">
+            </div>
+            <div>
+                <p>Dua Operaciilo/Second Operator: </p><input type="text" id="number2">
+            </div>
+            <div>
+                <p>Operacio/Operation: </p><input type="text" id="operation">
+            </div>
+            <div class="submit">
+                <button type="button" onclick="reset()">Replace/Enmeti</button>
+                <input type="submit" class="eval" value="Evaluate/Fari">
+            </div>
+        </form>
+        <p>Replace operator one with the answer/Enmeti la eligon en operaciilo unu: </p>
+        <button type="button" onclick="replaceOp1()">Replace/Enmeti</button>
+        <p>Place pi in operator one/Meti pi-on en operaciilo unu</p>
+        <button type="button" onclick="getPi()">Place/Meti</button>
+    </div>
+    <div class="respondo">
+        <h2 class="respondo">La Respondo/Response:</h2>
+        <p id="respondo">Waiting for input.../Atendanta por enligo</p>
+    </div>
+
+    <article class="notes">
+        <h3>Notes/Notoj:</h3>
+        <section class="operations">
+            <h4>Operations/Operacioj</h4>
+            <ul>
+                <li>Sumigi/Add/+</li>
+                <li>Subtract/Subtrakti/-</li>
+                <li>Multiply/Multipliki/*</li>
+                <li>Divide/Dividi/"/"</li>
+                <li>Modulus/Modulo/mod/%</li>
+                <li>Exponent/Potencigi/exp/pow/**/^</li>
+                <li>Nur uzante unu operaciilo/Only using one operator:
+                    <ul>
+                        <li>sin/sine</li>
+                        <li>tan</li>
+                        <li>absolute/absulutigi/abs</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </article>
+    <script src="js.js"></script>
+</body>
+
+</html>
