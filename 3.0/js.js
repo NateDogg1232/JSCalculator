@@ -1,13 +1,19 @@
 var lastAnswer = 0;
 
+var originalOutputValue = ""
+
 //Reset the form
-function reset() {
+function resetForm() {
     console.log("halp");
     document.getElementById("number1").value = "";
     document.getElementById("number2").value = "";
     document.getElementById("operation").value = "";
-    setOutput("");
+    setOutput(originalOutputValue);
     lastAnswer = 0;
+}
+
+function init() {
+    originalOutputValue = document.getElementById("respondo").innerHTML;
 }
 
 //The main function used to evaluate which operation is being done

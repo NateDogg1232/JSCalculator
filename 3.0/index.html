@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css.css">
 </head>
 
-<body>
+<body onload="init()">
 
     <h1>La Plej Bona Komputilo/The Best Calculator</h1>
     <div class="input">
@@ -22,7 +22,7 @@
                 <p>Operacio/Operation: </p><input type="text" id="operation">
             </div>
             <div class="submit">
-                <button type="button" onclick="reset()">Replace/Enmeti</button>
+                <button type="button" onclick="resetForm()">Replace/Enmeti</button>
                 <input type="submit" class="eval" value="Evaluate/Fari">
             </div>
         </form>
