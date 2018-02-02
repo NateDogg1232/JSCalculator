@@ -13,27 +13,43 @@ function resetForm() {
 
 function init() {
     originalOutputValue = document.getElementById("respondo").innerHTML;
+    nextNode(document.body);
 }
 
 //The main function used to evaluate which operation is being done
 function doThing() {
-    //We check for any blank boxes (With trimming of course)
-
-    if (document.getElementById("number1").value.trim() == "" || document.getElementById("number2").value.trim() == "") {
-        setOutput("Eraro: Enigi numeron en la enigejoj<br>Error: Enter value in the text areas");
-        return;
-    }
-
     //We get the operands evaluated as an integer
-    var int1 = parseFloat(document.getElementById("number1").value),
-        int2 = parseFloat(document.getElementById("number2").value);
+    var int1 = document.getElementById("number1").value,
+        int2 = document.getElementById("number2").value,
+        op = document.getElementById("operation").value.toLowerCase();
 
-    //Check the integers for some values that will kill things
-    if (int1 == null || int2 == null || int1 == undefined || int2 == undefined || int1 == NaN || int2 == NaN) {
-        setOutput("No nulls pl0x");
+
+    //Check for empty values
+    if (int1.trim() == "" || int2.trim() == "" || op.trim() == "") {
+        setOutput("Please input a value/Bonvolu enigi ion");
         return;
     }
-    switch (document.getElementById("operation").value.toLowerCase()) {
+    
+    if (int1.trim() == "pi")
+        int1 = Math.PI;
+    if (int2.trim() == "pi")
+        int1 = math.PI;
+    
+    //We parse them to floats
+    int1 = parseFloat(int1);
+    int2 = parseFloat(int2);
+
+    console.log(int1)
+    console.log(int1 == NaN);
+    console.log(int2);
+
+    //And now we check to see if any of them were not numbers
+    if (isNaN(int1) || isNaN(int2)) {
+        setOutput("No numbers were inputted/Ne estis numeroj enligitaj.");
+        return;
+    }
+
+    switch (op) {
         case "add":
         case "sumigi":
         case "+":
