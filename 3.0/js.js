@@ -4,7 +4,6 @@ var originalOutputValue = ""
 
 //Reset the form
 function resetForm() {
-    console.log("halp");
     document.getElementById("number1").value = "";
     document.getElementById("number2").value = "";
     document.getElementById("operation").value = "";
